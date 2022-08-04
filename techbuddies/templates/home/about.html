@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %} About {% endblock title %}
+{% block aboutactive %} active {% endblock aboutactive %}
+{% block body %}
+
+<div class="container">
+    <section class="hero-home">
+        <div class="swiper-container hero-slider swiper-container-fade swiper-container-horizontal">
+          <div class="swiper-wrapper dark-overlay" style="transition-duration: 2000ms;">
+            <div class="swiper-slide swiper-slide-prev" style="background-image: url(&quot;https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/photo-1501621965065-c6e1cf6b53e2.jpg&quot;); width: 1263px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 2000ms;"></div>
+            <div class="swiper-slide swiper-slide-active" style="background-image: url(&quot;https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/photo-1519974719765-e6559eac2575.jpg&quot;); width: 1263px; opacity: 1; transform: translate3d(-1263px, 0px, 0px); transition-duration: 2000ms;"></div>
+            <div class="swiper-slide swiper-slide-next" style="background-image: url(&quot;https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/photo-1490578474895-699cd4e2cf59.jpg&quot;); width: 1263px; opacity: 0; transform: translate3d(-2526px, 0px, 0px); transition-duration: 2000ms;"></div>
+            <div class="swiper-slide" style="background-image: url(&quot;https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/photo-1534850336045-c6c6d287f89e.jpg&quot;); width: 1263px; opacity: 0; transform: translate3d(-3789px, 0px, 0px); transition-duration: 2000ms;"></div>
+          </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        <div class="container py-6 py-md-7 text-white z-index-20">
+          <div class="row">
+            <div class="col-xl-10">
+              <div class="text-center text-lg-start">
+                <p class="subtitle letter-spacing-4 mb-2 text-secondary text-shadow">The best holiday experience</p>
+                <h1 class="display-3 fw-bold text-shadow">Stay like a local</h1>
+              </div>
+              <div class="search-bar mt-5 p-3 p-lg-1 ps-lg-4">
+                <form action="#">
+                  <div class="row">
+                    <div class="col-lg-4 d-flex align-items-center form-group">
+                      <input class="form-control border-0 shadow-0" type="text" name="search" placeholder="What are you searching for?">
+                    </div>
+                    <div class="col-lg-3 d-flex align-items-center form-group">
+                      <div class="input-label-absolute input-label-absolute-right w-100">
+                        <label class="label-absolute" for="location"><i class="fa fa-crosshairs"></i><span class="sr-only">City</span></label>
+                        <input class="form-control border-0 shadow-0" type="text" name="location" placeholder="Location" id="location">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 d-flex align-items-center form-group no-divider">
+                      <div class="dropdown bootstrap-select"><select class="selectpicker" title="Categories" data-style="btn-form-control"><option class="bs-title-option" value=""></option>
+                        <option value="small">Restaurants</option>
+                        <option value="medium">Hotels</option>
+                        <option value="large">Cafes</option>
+                        <option value="x-large">Garages</option>
+                      </select><button type="button" tabindex="-1" class="btn dropdown-toggle bs-placeholder btn-form-control" data-bs-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" title="Categories"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Categories</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-1" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+                    </div>
+                    <div class="col-lg-2 d-grid">
+                      <button class="btn btn-primary rounded-pill h-100" type="submit">Search </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</div>
+{% endblock body %}
