@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+{% block homeactive %} active {% endblock homeactive %}
+{% block body %}
+
+<div class="container my-3">
+  <div class="container">
+    <div class="jumbotron my-3">
+      <h1 class="display-4">Welcome to Techbuddies!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+        featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      {% if not request.user.is_authenticated %}
+      <div class="raw">
+        <button type="submit" class="btn btn-primary  mx-2" data-toggle="modal" data-target="#loginModal">
+          log in
+        </button>
+        <b class="mx-2"> Or </b>
+        <button type="submit" class="btn btn-primary mr-2" data-toggle="modal" data-target="#signupModal">
+          sign up
+        </button>
+      </div>
+      {% else %}
+
+      <a class="btn btn-primary btn-lg" href="/blog" role="button">Go to Blog</a>
+      {% endif %}
+    </div>
+  </div>
+  {% if request.user.is_authenticated %}
+  <div class="container">
+    <h2>Popular Blogposts</h2>
+
+    {% for post in allpost %}
+    <div
+      class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-primary">Post by: {{post.author}}</strong>
+        <h3 class="mb-0">{{post.title}}</h3>
+        <div class="mb-1 text-muted">{{post.timestamp}}</div>
+        <p class="card-text mb-auto">{{post.content| truncatechars:300}}</p>
+        <div class="my-3">
+          <a href="/blog/blogpost{{post.slug}}" role="button" class="btn btn-primary">Continue reading</a>
+        </div>
+      </div>
+
+    </div>
+    {% endfor %}
+
+  </div>
+  {% endif %}
+
+
+  {% endblock body %}
